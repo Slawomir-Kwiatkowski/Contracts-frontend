@@ -44,15 +44,44 @@ function Warehouses() {
     fetchWarehouses()
   }, []);
 
+  const onClick = (id) => {
+    console.log("Warehouse id:", id)
+    navigate(`/warehouses/${id}`)
+  }
+
   return (
     <>
-      {warehouses.length>0 ? 
+      {/* {warehouses.length>0 ? 
         warehouses.map((warehouse) => (
           <ul key={warehouse.id}>
             <li>{warehouse.warehouse_name}</li>
           </ul>
           )) : 
-          <h1>Loading...</h1>}
+          <h1>Loading...</h1>} */}
+      {warehouses.length>0 ? (
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Workspace Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              {warehouses.map((warehouse, index) =>
+                <tr onClick={() => (onClick(warehouse.id))} key={index}>
+                  <td>
+                    {++index}
+                  </td>
+                  <td>
+                    {warehouse.warehouse_name}
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        ) :
+        <h1>Loading...</h1>
+      }
     </>
   )
 }

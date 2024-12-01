@@ -6,6 +6,8 @@ import LoginPage from "./pages/LoginPage"
 import LogoutPage from "./pages/LogoutPage"
 import RegisterPage from "./pages/RegisterPage"
 import WarehousesPage from "./pages/WarehousesPage"
+import WarehousePage from "./pages/WarehousePage"
+import { warehouseLoader } from "./components/Warehouse"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,6 +17,8 @@ const router = createBrowserRouter(
       <Route path="/logout" element={<LogoutPage/>} />
       <Route path="/register" element={<RegisterPage/>} />
       <Route path="/warehouses" element={<WarehousesPage/>} />
+      <Route path="/warehouses" element={<WarehousesPage/>} />
+      <Route path="/warehouses/:id" element={<WarehousePage/>} loader={warehouseLoader} />
       <Route path="*" element={<ErrorPage/>} />
     </Route>
   )
