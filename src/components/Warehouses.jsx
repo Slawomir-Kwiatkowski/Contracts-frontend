@@ -44,11 +44,6 @@ function Warehouses() {
     fetchWarehouses()
   }, []);
 
-  const onClick = (id) => {
-    console.log("Warehouse id:", id)
-    navigate(`/warehouses/${id}`)
-  }
-
   return (
     <>
       {/* {warehouses.length>0 ? 
@@ -68,7 +63,7 @@ function Warehouses() {
             </thead>
             <tbody>
               {warehouses.map((warehouse, index) =>
-                <tr onClick={() => (onClick(warehouse.id))} key={index}>
+                <tr onClick={() => (navigate(`/warehouses/${warehouse.id}`))} key={index}>
                   <td>
                     {++index}
                   </td>
