@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
+import {Card, CardContent, Grid2 as Grid, Button, TextField, CardHeader, CardActions} from '@mui/material'
 
 
 function WarehouseForm({legend, id=null, warehouse=null}) {
@@ -57,29 +58,55 @@ function WarehouseForm({legend, id=null, warehouse=null}) {
     }
 
   return (
-    <form onSubmit={handleForm}>
-      <legend>{legend}</legend>  
-      <div>
-        <label>Warehouse name:</label>
-        <input
-            type="text"
-            value={warehouseName}
-            onChange={(e) => setWarehouseName(e.target.value)}
-            required
-          />
-      </div>
-      <div>
-        <label>Warehouse info:</label>
-        <input
-            type="text"
-            value={warehouseInfo}
-            onChange={(e) => setWarehouseInfo(e.target.value)}
-            required
-          />
-      </div>
-      <button type="submit">Submit</button>
-      <button type="button" onClick={() =>navigate('/warehouses')}>Cancel</button>
-    </form>
+    <Grid
+      container
+      sx={{
+        justifyContent: "center",
+        alignItems: "center",
+        height: '100vh',
+        margin: 'auto',
+      }}
+    >
+      <Card
+      sx={{
+        padding: 1, 
+        boxShadow: 3, }}>
+        <CardHeader title={legend} titleTypographyProps={{ align: 'center' }}/>
+        <form onSubmit={handleForm}>
+          <CardContent>
+          
+            <TextField
+                required
+                fullWidth
+                id="outlined-required"
+                label="Warehouse Name"
+                value={warehouseName}
+                onChange={(e) => setWarehouseName(e.target.value)}
+                sx={{
+                  mb: 2, // Optional padding
+                }}
+              />
+            <TextField
+              required
+              fullWidth
+              multiline
+              rows={4}
+              id="outlined-required"
+              label="Warehouse Info"
+              value={warehouseInfo}
+              onChange={(e) => setWarehouseInfo(e.target.value)}
+              sx={{
+                mb: 2, // Optional padding
+              }}
+            />
+          </CardContent>
+          <CardActions>
+            <Button variant="contained" onClick={() =>navigate('/warehouses')}>Cancel</Button>
+            <Button variant="contained" type="submit">Submit</Button>
+          </CardActions>
+        </form>
+      </Card>
+    </Grid>
   )
 }
 
