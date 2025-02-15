@@ -1,4 +1,4 @@
-<h2>::: under development and without css styles :::</h2>
+<h2>::: under development:::</h2>
 
 <h1>React frontend for booking time slots during warehouse deliveries</h1>
 
