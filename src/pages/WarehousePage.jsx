@@ -1,5 +1,5 @@
 import Warehouse from "../components/Warehouse"
-import { useNavigate, useParams, Link } from "react-router-dom"
+import {  useParams } from "react-router-dom"
 
 function WarehousePage() {
   const {id} = useParams()

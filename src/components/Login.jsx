@@ -6,9 +6,10 @@ import { LoginContext } from '../context/LoginContext';
 function Login() {
   const navigate = useNavigate()
   const location = useLocation()
+  
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
-  const [error, setError] = useState('')
+
   const {loginState, setLoginState} = useContext(LoginContext)
 
   const handleLogin = async (e) => {

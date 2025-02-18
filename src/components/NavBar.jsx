@@ -16,7 +16,7 @@ function NavBar() {
         <Toolbar>
           <img src={logo} style={{ width: 32, height: 32, paddingRight: 10 }}/>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Contracts
+            {/* Contracts */}
           </Typography>
           <Link to='/contracts' style={{color: '#FFFFFF'}}>
             <Button color="inherit">Contracts</Button>

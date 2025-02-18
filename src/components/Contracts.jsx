@@ -36,7 +36,6 @@ function Contracts() {
       }
       const data = await res.json()
       setContracts(data)
-      console.log(data)
     } catch (err) {
       console.log("error:", err)
     }
