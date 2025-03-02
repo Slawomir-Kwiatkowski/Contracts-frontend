@@ -21,7 +21,7 @@ function WarehousesPage() {
             <Button 
                 variant="contained" 
                 startIcon={<AddTaskOutlinedIcon />}
-                sx={{mt:2, mb:2}}
+                sx={{margin: 1}}
                 onClick={() => navigate('/add-warehouse')} 
                 disabled={warehouses?.detail ? true : false}
             />

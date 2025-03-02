@@ -1,9 +1,10 @@
 import Hero from "../components/Hero"
+import { Typography } from "@mui/material"
 function MainPage() {
   return (
     <>
         <Hero />
-        Main Page Content
+        <Typography variant="h6" sx={{margin: 1}}>Main Page content here (Announcements and News)</Typography>
     </>
   )
 }

@@ -9,9 +9,9 @@ function Warehouses(props) {
   const paginationModel = { page: 0, pageSize: 5 };
 
   const columns = [
-    { field: 'index', headerName: '#', width: 50 },
-    { field: 'warehouseName', headerName: 'Warehouse', width: 150 },
-    { field: 'warehouseInfo', headerName: 'Info', width: 250 },
+    { field: 'index', headerName: '#', width: 50, headerClassName: 'header-style' },
+    { field: 'warehouseName', headerName: 'Warehouse', width: 150, headerClassName: 'header-style' },
+    { field: 'warehouseInfo', headerName: 'Info', width: 250, headerClassName: 'header-style' },
   ];
   
   let rows
@@ -33,14 +33,18 @@ function Warehouses(props) {
   return (
     <>
       
-      <Paper sx={{ height: '100%', width: '100%' }}>
+      <Paper sx={{ height: '100%', width: '100%', headerClassName: 'header-style'}}>
         {warehouses &&
         <DataGrid
           rows={rows}
           columns={columns}
           initialState={{ pagination: { paginationModel } }}
           pageSizeOptions={[5, 10]}
-          sx={{ border: 0 }}
+          sx={{ border: 0, 
+              '& .header-style': {
+          backgroundColor: '#a5d6a7',
+              }
+           }}
           onRowClick={(params) => (navigate(`/warehouses/${params.row.id}`))}
         /> }
       </Paper>
