@@ -1,7 +1,7 @@
 <h1>React frontend for API created in Django Rest Framework </h1>
 <h2>handling booking of time slots for goods deliveries</h2>
 
-<h4>*** under development ***</h4>
+<h4 style="text-align: center;">*** under development ***</h4>
 <h6>Data originally retrieved using the useEffect hook, then changed to useLoaderData. I added the useContext hook so that the interface changes when the user logs in.</h6>
 <br/>
 <ul>
