@@ -4,8 +4,8 @@
 <h4>*** under development ***</h4>
 <h6>Data originally retrieved using the useEffect hook, then changed to useLoaderData. I added the useContext hook so that the interface changes when the user logs in.</h6>
 <div style="display: inline-block;">
-<h6>Creating a booking document in PDF format, without saving the file on the server.</h6>
-<a href="https://simple-python-blog.blogspot.com/search/label/Reportlab">as described here</a>
+<h6 style="float: left;">Creating a booking document in PDF format, without saving the file on the server.</h6>
+<a style="float: right;" href="https://simple-python-blog.blogspot.com/search/label/Reportlab">as described here</a>
 </div>
 <ul>
   <li>Warehouse handling - completed (MaterialUI styles added, creating, editing, deleting a warehouse - done</li>
