@@ -1,4 +1,4 @@
-<h1>React frontend for api created in Django Rest Framework </h1>
+<h1>React frontend for API created in Django Rest Framework </h1>
 <h2>handling booking of time slots for goods deliveries</h2>
 
 <h4>*** under development ***</h4>
